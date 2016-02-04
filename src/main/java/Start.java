@@ -1,4 +1,5 @@
 import GUI.MainForm;
+import Solution.Calculator;
 import Solution.IndexCalculator;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ public class Start {
         String file;
 
         file = "src//main//resources//index.txt";
-        final IndexCalculator ic = new IndexCalculator(file);
+        final Calculator ic = new IndexCalculator(file);
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
                                                    public void run() {

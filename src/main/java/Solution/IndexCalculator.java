@@ -13,16 +13,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class IndexCalculator {
+public class IndexCalculator implements Calculator{
 
     String src;
-    static HashMap<YearMonth, Float> indexes = new HashMap<YearMonth, Float>();
-    public static String[] enumBasePer;
-    public static String[] enumCalcPer;
-    public  int minzp = 1378;                                     // минимальная зарплата по умолчанию
+    HashMap<YearMonth, BigDecimal> indexes = new HashMap<YearMonth, BigDecimal>();
+    public String[] enumBasePer;
+    public String[] enumCalcPer;
+    public BigDecimal minzp = new BigDecimal("1378");                                     //the minimum wage by default
     private YearMonth startIndexesPeriod = YearMonth.of(1999, 10);
     private YearMonth endIndexesPeriod;
     private static final YearMonth startCalc = YearMonth.of(2016,1);
+    BigDecimal limit = new BigDecimal("1.03");
+
 
     public IndexCalculator(String src){
         setSrc(src);
@@ -31,7 +33,7 @@ public class IndexCalculator {
 
     public void initialization(){
 
-        setMinzp(1378);
+        setMinzp(new BigDecimal(1378));
         fillIndex(src);
         fillBasePeriod();
         fillCalcPeriod();
@@ -48,7 +50,7 @@ public class IndexCalculator {
                 if (!currentIndex.equals("")) {
                     YearMonth yearMonth = YearMonth.parse(currentIndex.split("\t")[0].split("\\.")[2]
                             + "-" + currentIndex.split("\t")[0].split("\\.")[1]);
-                    indexes.put(yearMonth, Float.parseFloat(currentIndex.split("\t")[1].replaceAll(",", ".")));
+                    indexes.put(yearMonth, new BigDecimal(currentIndex.split("\t")[1].replaceAll(",", ".")));
                 }
             }
 
@@ -101,36 +103,42 @@ public class IndexCalculator {
      * @throws NullPointerException
      */
 
-    static public float solve (String basePer, String calcPeriod)throws NullPointerException{
+     public BigDecimal solve (String basePer, String calcPeriod)throws NullPointerException{
         if(basePer == null || calcPeriod == null)
             throw new NullPointerException("Period is null!");
 
-        float coefficient = 1.0f;
-        float bound = 0.0f;
+        BigDecimal coefficient = BigDecimal.ONE;
+        BigDecimal bound = BigDecimal.ZERO;
         YearMonth base = YearMonth.parse(basePer);
         YearMonth calc = YearMonth.parse(calcPeriod);
-        ArrayList<Float> excessLimit = new ArrayList<Float>();
+        ArrayList<BigDecimal> excessLimit = new ArrayList<BigDecimal>();
 
-        if (base.compareTo(calc.minusMonths(2))>=0) {
-            return 0.0f;
+        if (base.compareTo(calc.minusMonths(2))>0) {
+            return BigDecimal.ZERO.setScale(3, RoundingMode.HALF_UP);
         }
 
         for(YearMonth i = base.plusMonths(1); i.compareTo(calc.minusMonths(2))< 0; i = i.plusMonths(1) ){
 
-            if(bound != 0) bound *= indexes.get(i);
+
+            if(bound.compareTo(BigDecimal.ZERO)!= 0) bound = bound.multiply(indexes.get(i));
             else bound = indexes.get(i);
 
-            if(bound >= 1.03) {
-                excessLimit.add(new BigDecimal(bound).setScale(3, RoundingMode.HALF_UP).floatValue());
-                bound = 0;
+
+            if(bound.compareTo(limit)>=0) {
+                excessLimit.add(bound.setScale(3, RoundingMode.HALF_UP));
+                bound = BigDecimal.ZERO;
             }
         }
 
-        for(float count: excessLimit) coefficient *= count;
+         for(BigDecimal count: excessLimit) {
+             coefficient = coefficient.multiply(count);
+         }
 
-        coefficient = coefficient - 1;
-        if (coefficient < 0) coefficient =0;
-        coefficient = new BigDecimal(coefficient).setScale(3, RoundingMode.HALF_UP).floatValue();
+        coefficient = coefficient.subtract(BigDecimal.ONE);
+        if (coefficient.compareTo(BigDecimal.ZERO) < 0) {
+            coefficient = BigDecimal.ZERO ;
+        }
+        coefficient = coefficient.setScale(3, RoundingMode.HALF_UP);
         return coefficient;
     }
 
@@ -167,11 +175,11 @@ public class IndexCalculator {
         this.endIndexesPeriod = endIndexesPeriod;
     }
 
-    public  int getMinzp() {
+    public  BigDecimal getMinzp() {
         return minzp;
     }
 
-    public  void setMinzp(int minzp) {
+    public  void setMinzp(BigDecimal minzp) {
         this.minzp = minzp;
     }
 

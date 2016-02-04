@@ -1,11 +1,12 @@
 package GUI;
 
-import Solution.IndexCalculator;
+import Solution.Calculator;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
 
 
 /**
@@ -18,7 +19,7 @@ public class MainForm extends JFrame{
     String calc = "2016-01";        // значения по-умолчанию
 
 
-    public MainForm(final IndexCalculator ic){
+    public MainForm(final Calculator ic){
 
         super ("Расчет индексации с 2016 года");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,9 +95,9 @@ public class MainForm extends JFrame{
 
             public void actionPerformed(ActionEvent e) {
 
-                float answer = ic.solve(base,calc);
+                BigDecimal answer = ic.solve(base,calc);
                 coefOut.setText(String.valueOf(answer));
-                sumindex.setText(String.valueOf(answer * ic.getMinzp()));
+                sumindex.setText(String.valueOf(answer.multiply(ic.getMinzp())));
             }
         });
 
