@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class IndexIndexCalculatorImpl implements IndexCalculator {
+public class IndexCalculatorImpl implements IndexCalculator {
 
     String src;
     HashMap<YearMonth, BigDecimal> indexes = new HashMap<YearMonth, BigDecimal>();
@@ -26,7 +26,7 @@ public class IndexIndexCalculatorImpl implements IndexCalculator {
     BigDecimal limit = new BigDecimal("1.03");
 
 
-    public IndexIndexCalculatorImpl(String src){
+    public IndexCalculatorImpl(String src){
         setSrc(src);
         initialization();
     }
