@@ -33,7 +33,6 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
     public void initialization(){
 
-        setMinzp(new BigDecimal(1378));
         fillIndex(src);
         fillBasePeriod();
         fillCalcPeriod();
@@ -119,6 +118,9 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
         for(YearMonth i = base.plusMonths(1); i.compareTo(calc.minusMonths(2))< 0; i = i.plusMonths(1) ){
 
+            if(indexes.get(i)==null){
+                continue;
+            }
 
             if(bound.compareTo(BigDecimal.ZERO)!= 0) {
                 bound = bound.multiply(indexes.get(i));

@@ -1,7 +1,11 @@
+import Solution.IndexCalculator;
 import Solution.IndexCalculatorImpl;
+import org.junit.Before;
 import org.junit.Test;
+
 import java.math.BigDecimal;
 import java.time.YearMonth;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -13,7 +17,13 @@ public class IndexCalculatorImplTest {
 
 
 
-    private IndexCalculatorImpl impl = new IndexCalculatorImpl("src//main//resources//index.txt");
+    IndexCalculator impl = new IndexCalculatorImpl("src//main//resources//index.txt");
+
+    @Before
+    public void init(){
+        impl.initialization();
+    }
+
 
     @Test
     public void testForZero(){
@@ -22,6 +32,7 @@ public class IndexCalculatorImplTest {
             assertEquals(impl.solve(tmpYear.toString(),"2016-01"), new BigDecimal("0.000"));
             tmpYear = tmpYear.plusMonths(1);
         }
+
     }
 
     @Test
