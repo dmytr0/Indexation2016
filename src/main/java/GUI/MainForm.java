@@ -1,6 +1,6 @@
 package GUI;
 
-import Solution.Calculator;
+import Solution.IndexCalculator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,7 @@ public class MainForm extends JFrame{
     String calc = "2016-01";        // значения по-умолчанию
 
 
-    public MainForm(final Calculator ic){
+    public MainForm(final IndexCalculator ic){
 
         super ("Расчет индексации с 2016 года");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

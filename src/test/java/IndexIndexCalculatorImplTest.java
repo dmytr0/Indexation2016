@@ -1,4 +1,4 @@
-import Solution.IndexCalculator;
+import Solution.IndexIndexCalculatorImpl;
 import org.junit.Test;
 import java.math.BigDecimal;
 import java.time.YearMonth;
@@ -9,11 +9,11 @@ import static org.junit.Assert.assertEquals;
  */
 
 
-public class IndexCalculatorTest {
+public class IndexIndexCalculatorImplTest {
 
 
 
-    private IndexCalculator impl = new IndexCalculator("src//main//resources//index.txt");
+    private IndexIndexCalculatorImpl impl = new IndexIndexCalculatorImpl("src//main//resources//index.txt");
 
     @Test
     public void testForZero(){
