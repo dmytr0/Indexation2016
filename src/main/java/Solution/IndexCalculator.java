@@ -11,5 +11,6 @@ public interface IndexCalculator {
     public  String[] getEnumBasePer();
     public  String[] getEnumCalcPer();
     public  BigDecimal getMinzp();
+    public void initialization();
 
 }

@@ -27,8 +27,8 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
 
     public IndexCalculatorImpl(String src){
-        setSrc(src);
-        initialization();
+        this.src = src;
+
     }
 
     public void initialization(){
@@ -81,8 +81,9 @@ public class IndexCalculatorImpl implements IndexCalculator {
     public void fillCalcPeriod(){
         YearMonth tmpPeriod;
         YearMonth maxAvalible = getEndIndexesPeriod().plusMonths(2);
-        if (maxAvalible.compareTo(getStartCalc())<0)
+        if (maxAvalible.compareTo(getStartCalc())<0) {
             throw new IllegalArgumentException("Avalible period less the calc period");
+        }
         tmpPeriod = getStartCalc();
         ArrayList<String> list = new ArrayList<String>();
         while(tmpPeriod.compareTo(maxAvalible) <= 0) {
@@ -100,13 +101,12 @@ public class IndexCalculatorImpl implements IndexCalculator {
      * @param basePer base period such as"2007-12", not null
      * @param calcPeriod pay period such as"2007-12", not null
      * @return indexation coefficient, not null
-     * @throws NullPointerException
      */
 
-     public BigDecimal solve (String basePer, String calcPeriod)throws NullPointerException{
-        if(basePer == null || calcPeriod == null)
-            throw new NullPointerException("Period is null!");
-
+     public BigDecimal solve (String basePer, String calcPeriod){
+        if(basePer == null || calcPeriod == null) {
+            throw new IllegalArgumentException("Parameters are incorrect");
+        }
         BigDecimal coefficient = BigDecimal.ONE;
         BigDecimal bound = BigDecimal.ZERO;
         YearMonth base = YearMonth.parse(basePer);
@@ -120,7 +120,9 @@ public class IndexCalculatorImpl implements IndexCalculator {
         for(YearMonth i = base.plusMonths(1); i.compareTo(calc.minusMonths(2))< 0; i = i.plusMonths(1) ){
 
 
-            if(bound.compareTo(BigDecimal.ZERO)!= 0) bound = bound.multiply(indexes.get(i));
+            if(bound.compareTo(BigDecimal.ZERO)!= 0) {
+                bound = bound.multiply(indexes.get(i));
+            }
             else bound = indexes.get(i);
 
 
