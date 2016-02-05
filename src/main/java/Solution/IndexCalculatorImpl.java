@@ -42,9 +42,10 @@ public class IndexCalculatorImpl implements IndexCalculator {
     public void fillIndex(String file) {
 
         try {
-            BufferedReader fr = new BufferedReader(new FileReader(file));
+            FileReader fileReader = new FileReader(file);
+            BufferedReader br = new BufferedReader(fileReader);
             String currentIndex;
-            while ((currentIndex = fr.readLine()) != null) {
+            while ((currentIndex = br.readLine()) != null) {
 
                 if (!currentIndex.equals("")) {
                     YearMonth yearMonth = YearMonth.parse(currentIndex.split("\t")[0].split("\\.")[2]
