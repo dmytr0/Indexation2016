@@ -1,4 +1,4 @@
-package Solution; /**
+package com.lemon.Solution; /**
  * admin on 03.02.2016.
  */
 

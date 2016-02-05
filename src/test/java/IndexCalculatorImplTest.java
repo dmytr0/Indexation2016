@@ -1,5 +1,5 @@
-import Solution.IndexCalculator;
-import Solution.IndexCalculatorImpl;
+import com.lemon.Solution.IndexCalculator;
+import com.lemon.Solution.IndexCalculatorImpl;
 import org.junit.Before;
 import org.junit.Test;
 

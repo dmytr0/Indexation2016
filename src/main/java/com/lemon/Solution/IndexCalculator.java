@@ -1,4 +1,4 @@
-package Solution;
+package com.lemon.Solution;
 
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;

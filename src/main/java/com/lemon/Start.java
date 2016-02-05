@@ -1,6 +1,8 @@
-import GUI.MainForm;
-import Solution.IndexCalculator;
-import Solution.IndexCalculatorImpl;
+package com.lemon;
+
+import com.lemon.GUI.MainForm;
+import com.lemon.Solution.IndexCalculator;
+import com.lemon.Solution.IndexCalculatorImpl;
 
 import javax.swing.*;
 
