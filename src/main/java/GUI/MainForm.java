@@ -38,7 +38,7 @@ public class MainForm extends JFrame{
         baseLable.setAlignmentX(LEFT_ALIGNMENT);
         baseLable.setFont(font);
 
-        JLabel comentsLable = new JLabel("              =) ");
+        final JLabel comentsLable = new JLabel("              =) ");
         comentsLable.setAlignmentX(LEFT_ALIGNMENT);
         comentsLable.setFont(new Font("ComicSansMC", Font.BOLD, 10));
 
@@ -96,8 +96,13 @@ public class MainForm extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                 BigDecimal answer = ic.solve(base,calc);
-                coefOut.setText(String.valueOf(answer));
-                sumindex.setText(String.valueOf(answer.multiply(ic.getMinzp())));
+                if(answer.compareTo(BigDecimal.ZERO)<0){
+                    comentsLable.setText("Отсутствуют необходиміе индексы");
+                }
+                else {
+                    coefOut.setText(String.valueOf(answer));
+                    sumindex.setText(String.valueOf(answer.multiply(ic.getMinzp())));
+                }
             }
         });
 

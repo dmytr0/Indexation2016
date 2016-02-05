@@ -119,7 +119,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
         for(YearMonth i = base.plusMonths(1); i.compareTo(calc.minusMonths(2))< 0; i = i.plusMonths(1) ){
 
             if(indexes.get(i)==null){
-                continue;
+                return new BigDecimal("-1");
             }
 
             if(bound.compareTo(BigDecimal.ZERO)!= 0) {
