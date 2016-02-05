@@ -12,10 +12,8 @@ public class Start {
 
     public static void main(String[] args) {
         String file;
-
         file = "src//main//resources//index.txt";
         final IndexCalculator ic = new IndexCalculatorImpl(file);
-        ic.initialization();
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
                                                    public void run() {

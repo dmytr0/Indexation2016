@@ -1,5 +1,6 @@
 package Solution;
 
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
 /**
@@ -11,7 +12,7 @@ public interface IndexCalculator {
     public  String[] getEnumBasePer();
     public  String[] getEnumCalcPer();
     public  BigDecimal getMinzp();
-    public void initialization();
+    public void initialization() throws FileNotFoundException;
     public void setSrc(String src);
 
 }

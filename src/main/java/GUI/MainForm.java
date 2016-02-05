@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
 
@@ -22,6 +23,11 @@ public class MainForm extends JFrame{
     public MainForm(final IndexCalculator ic){
 
         super ("Расчет индексации с 2016 года");
+
+        try {
+            ic.initialization();
+
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Font font = new Font("Verdana", Font.PLAIN, 14);
 
@@ -123,6 +129,26 @@ public class MainForm extends JFrame{
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
+
+        } catch (FileNotFoundException e) {
+
+            JOptionPane.showMessageDialog(this,
+                    e.getMessage()+ " \n" +
+                            "Contact your administrator",
+                    "File Not Found!",
+                    JOptionPane.ERROR_MESSAGE);
+            this.dispose();
+
+        }
+        catch (IllegalArgumentException e){
+            JOptionPane.showMessageDialog(this,
+                    e.getMessage()+ " \n" +
+                            "Contact your administrator",
+                    "Error!",
+                    JOptionPane.ERROR_MESSAGE);
+            this.dispose();
+        }
+
     }
 
 }

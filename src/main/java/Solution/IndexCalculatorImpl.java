@@ -2,10 +2,7 @@ package Solution; /**
  * admin on 03.02.2016.
  */
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.YearMonth;
@@ -31,7 +28,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
     }
 
-    public void initialization(){
+    public void initialization() throws FileNotFoundException {
 
         fillIndex(src);
         fillBasePeriod();
@@ -39,9 +36,14 @@ public class IndexCalculatorImpl implements IndexCalculator {
     }
 
     //fill indexes
-    public void fillIndex(String file) {
+    public void fillIndex(String src) throws FileNotFoundException {
 
+        File file = new File(src);
+        if (!file.exists() && !file.isFile()) {
+            throw new FileNotFoundException("File: \"" + src + "\" not found!");
+        }
         try {
+
             FileReader fileReader = new FileReader(file);
             BufferedReader br = new BufferedReader(fileReader);
             String currentIndex;
@@ -54,9 +56,6 @@ public class IndexCalculatorImpl implements IndexCalculator {
                 }
             }
 
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
-            e.printStackTrace();
         } catch (IOException e) {
             System.out.println("ReadingError");
             e.printStackTrace();
@@ -82,7 +81,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
         YearMonth tmpPeriod;
         YearMonth maxAvalible = getEndIndexesPeriod().plusMonths(2);
         if (maxAvalible.compareTo(getStartCalc())<0) {
-            throw new IllegalArgumentException("Avalible period less the calc period");
+            throw new IllegalArgumentException("Not all indexes are loaded!");
         }
         tmpPeriod = getStartCalc();
         ArrayList<String> list = new ArrayList<String>();

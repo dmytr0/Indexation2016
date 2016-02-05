@@ -3,6 +3,7 @@ import Solution.IndexCalculatorImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.time.YearMonth;
 
@@ -15,15 +16,19 @@ import static org.junit.Assert.assertEquals;
 
 public class IndexCalculatorImplTest {
 
-
-
     IndexCalculator impl = new IndexCalculatorImpl("src//main//resources//index.txt");
+    IndexCalculator notExist = new IndexCalculatorImpl("null");
+    IndexCalculator empty = new IndexCalculatorImpl("src//test//java//empty");
 
     @Before
     public void init(){
-        impl.initialization();
-    }
 
+        try {
+            impl.initialization();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void testForZero(){
@@ -32,7 +37,6 @@ public class IndexCalculatorImplTest {
             assertEquals(impl.solve(tmpYear.toString(),"2016-01"), new BigDecimal("0.000"));
             tmpYear = tmpYear.plusMonths(1);
         }
-
     }
 
     @Test
@@ -51,6 +55,22 @@ public class IndexCalculatorImplTest {
     @Test
     public void test04(){
         assertEquals(impl.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
+    }
+
+    @Test(expected = FileNotFoundException.class)
+    public void testNotExistFile() throws FileNotFoundException {
+        notExist.initialization();
+        assertEquals(notExist.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testEmptyFile()  {
+        try {
+            empty.initialization();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        assertEquals(empty.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
     }
 
 
