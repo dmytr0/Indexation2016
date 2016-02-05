@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f36966f-c7d3-4986-b29a-f687895b0105" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/GUI/MainForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GUI/MainForm$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GUI/MainForm$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GUI/MainForm$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GUI/MainForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Solution/IndexCalculator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Start$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Start.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Solution/IndexCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Solution/IndexCalculatorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Start.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Start.java" />
+    <list default="true" id="9f36966f-c7d3-4986-b29a-f687895b0105" name="Default" comment="Fix 10&#10;Tests">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Exceptions/ProblemFileException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lemon/Start.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/Start.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java" />
     </list>
     <list id="60f0274a-ad16-4300-8502-64ac13941139" name="Failed commit: Default" comment="upload" />
@@ -44,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="75" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
+              <caret line="86" column="71" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,11 +45,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexCalculatorImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9392265">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpectedException.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/rules/ExpectedException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+              <folding>
+                <element signature="e#4331#4332#0" expanded="true" />
+                <element signature="e#4387#4388#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProblemFileException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Exceptions/ProblemFileException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9911602">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +96,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Start.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="93" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="97" />
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#557#919#0" expanded="true" />
-                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#515#877#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +111,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,8 +143,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Solution/IndexCalculatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/MainForm.java" />
-        <option value="$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemon/Exceptions/ProblemFileException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lemon/Start.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java" />
       </list>
     </option>
   </component>
@@ -377,21 +409,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndexationGUI2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndexationGUI2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,6 +462,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lemon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndexationGUI2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndexationGUI2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndexationGUI2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndexationGUI2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -956,7 +1042,7 @@
       <workItem from="1454532802424" duration="1481000" />
       <workItem from="1454571477667" duration="21599000" />
       <workItem from="1454656211259" duration="9134000" />
-      <workItem from="1454669628290" duration="7537000" />
+      <workItem from="1454669628290" duration="11908000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <created>1454587367810</created>
@@ -1012,25 +1098,16 @@
       <option name="project" value="LOCAL" />
       <updated>1454672075758</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix 9&#10;package">
+      <created>1454677541001</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1454677541001</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 12h 54m 40s.xml">
-      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 13h 24m 55s.xml">
-      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 13h 29m 46s.xml">
-      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 13h 32m 28s.xml">
-      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 13h 33m 55s.xml">
-      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 13h 54m 58s.xml">
       <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
     </history-entry>
@@ -1040,19 +1117,34 @@
     <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 14h 22m 22s.xml">
       <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IndexCalculatorTest - 2016.02.04 at 14h 10m 46s.xml">
-      <configuration name="IndexCalculatorTest" configurationId="JUnit" />
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 16h 33m 56s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IndexIndexCalculatorImplTest - 2016.02.04 at 14h 44m 55s.xml">
-      <configuration name="IndexIndexCalculatorImplTest" configurationId="JUnit" />
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 16h 35m 10s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 16h 35m 44s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 17h 02m 54s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 17h 03m 04s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 17h 04m 01s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexCalculatorImplTest - 2016.02.05 at 17h 05m 12s.xml">
+      <configuration name="IndexCalculatorImplTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59021000" />
+    <option name="totallyTimeSpent" value="63392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1354" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1061,10 +1153,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40085745" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19938177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19938177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1096,7 +1188,8 @@
     <MESSAGE value="Fix 7&#10;BufReader" />
     <MESSAGE value="Fix 7&#10;Exceptions" />
     <MESSAGE value="Fix 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix 8" />
+    <MESSAGE value="Fix 9&#10;package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix 9&#10;package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,9 +1223,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,8 +1243,8 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1172,9 +1263,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,8 +1283,8 @@
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,8 +1315,8 @@
           <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1258,8 +1347,8 @@
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1290,8 +1379,8 @@
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1327,14 +1416,6 @@
             <element signature="e#4408#4409#0" expanded="false" />
             <element signature="e#4460#4461#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25454545">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,26 +1455,24 @@
         <state vertical-scroll-proportion="0.63314915">
           <caret line="1149" column="16" selection-start-line="1149" selection-start-column="16" selection-end-line="1149" selection-end-column="16" />
           <folding>
-            <element signature="e#40355#40356#0" expanded="true" />
-            <element signature="e#40382#40383#0" expanded="true" />
+            <element signature="e#40355#40356#0" expanded="false" />
+            <element signature="e#40382#40383#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="75" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.05635359">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1403,19 +1482,48 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="93" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="97" />
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#919#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#515#877#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/GUI/MainForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Exceptions/ProblemFileException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9911602">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/rules/ExpectedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+          <folding>
+            <element signature="e#4331#4332#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemon/Solution/IndexCalculatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="71" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/IndexCalculatorImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9392265">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

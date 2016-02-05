@@ -1,6 +1,6 @@
 package com.lemon.Solution;
 
-import java.io.FileNotFoundException;
+import com.lemon.Exceptions.ProblemFileException;
 import java.math.BigDecimal;
 
 /**
@@ -12,7 +12,7 @@ public interface IndexCalculator {
     public  String[] getEnumBasePer();
     public  String[] getEnumCalcPer();
     public  BigDecimal getMinzp();
-    public void initialization() throws FileNotFoundException;
+    public void initialization() throws ProblemFileException;
     public void setSrc(String src);
 
 }

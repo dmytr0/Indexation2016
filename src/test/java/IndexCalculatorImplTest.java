@@ -1,17 +1,16 @@
+import com.lemon.Exceptions.ProblemFileException;
 import com.lemon.Solution.IndexCalculator;
 import com.lemon.Solution.IndexCalculatorImpl;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.time.YearMonth;
 
 import static org.junit.Assert.assertEquals;
-
-/**
- * admin on 03.02.2016.
- */
 
 
 public class IndexCalculatorImplTest {
@@ -20,12 +19,15 @@ public class IndexCalculatorImplTest {
     IndexCalculator notExist = new IndexCalculatorImpl("null");
     IndexCalculator empty = new IndexCalculatorImpl("src//test//java//empty");
 
+    @Rule
+    public ExpectedException expectedEx = ExpectedException.none();
+
     @Before
     public void init(){
 
         try {
             impl.initialization();
-        } catch (FileNotFoundException e) {
+        } catch (ProblemFileException e) {
             e.printStackTrace();
         }
     }
@@ -38,38 +40,38 @@ public class IndexCalculatorImplTest {
             tmpYear = tmpYear.plusMonths(1);
         }
     }
-
     @Test
-    public void test01(){
+    public void testResult01(){
         assertEquals(impl.solve("2015-01","2016-01"), new BigDecimal("0.371") );
     }
-
     @Test
-    public void test02(){
+    public void testResult02(){
         assertEquals(impl.solve("2014-01","2016-01"),  new BigDecimal("0.761") );
     }
     @Test
-    public void test03(){
+    public void testResult03(){
         assertEquals(impl.solve("2013-01","2016-01"),  new BigDecimal("0.770") );
     }
     @Test
-    public void test04(){
+    public void testResult04(){
         assertEquals(impl.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
     }
 
-    @Test(expected = FileNotFoundException.class)
-    public void testNotExistFile() throws FileNotFoundException {
+    @Test
+    public void testNotExistFile() throws FileNotFoundException, ProblemFileException {
+        expectedEx.expect(ProblemFileException.class);
+        expectedEx.expectMessage("not found!");
+
         notExist.initialization();
         assertEquals(notExist.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testEmptyFile()  {
-        try {
-            empty.initialization();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    @Test
+    public void testEmptyFile() throws ProblemFileException {
+
+        expectedEx.expect(ProblemFileException.class);
+        expectedEx.expectMessage("Not all indexes are loaded!");
+        empty.initialization();
         assertEquals(empty.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
     }
 

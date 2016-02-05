@@ -1,18 +1,16 @@
 package com.lemon.GUI;
 
+import com.lemon.Exceptions.ProblemFileException;
 import com.lemon.Solution.IndexCalculator;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
 
-/**
- * admin on 03.02.2016.
- */
+
 
 public class MainForm extends JFrame{
 
@@ -103,7 +101,7 @@ public class MainForm extends JFrame{
 
                     BigDecimal answer = ic.solve(base, calc);
                     if (answer.compareTo(BigDecimal.ZERO) < 0) {
-                        comentsLable.setText("Отсутствуют необходиміе индексы");
+                        comentsLable.setText("Отсутствуют необходимые индексы");
                     } else {
                         coefOut.setText(String.valueOf(answer));
                         sumindex.setText(String.valueOf(answer.multiply(ic.getMinzp())));
@@ -129,23 +127,15 @@ public class MainForm extends JFrame{
             setLocationRelativeTo(null);
             setVisible(true);
 
-        } catch (FileNotFoundException e) {
+        } catch (ProblemFileException e) {
 
             JOptionPane.showMessageDialog(this,
                     e.getMessage()+ " \n" +
                             "Contact your administrator",
-                    "File Not Found!",
+                    "Problem File!",
                     JOptionPane.ERROR_MESSAGE);
             this.dispose();
 
-        }
-        catch (IllegalArgumentException e){
-            JOptionPane.showMessageDialog(this,
-                    e.getMessage()+ " \n" +
-                            "Contact your administrator",
-                    "Error!",
-                    JOptionPane.ERROR_MESSAGE);
-            this.dispose();
         }
 
     }

@@ -1,8 +1,11 @@
-package com.lemon.Solution; /**
- * admin on 03.02.2016.
- */
+package com.lemon.Solution;
 
-import java.io.*;
+import com.lemon.Exceptions.ProblemFileException;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.YearMonth;
@@ -28,7 +31,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
     }
 
-    public void initialization() throws FileNotFoundException {
+    public void initialization() throws ProblemFileException {
 
         fillIndex(src);
         fillBasePeriod();
@@ -36,11 +39,11 @@ public class IndexCalculatorImpl implements IndexCalculator {
     }
 
     //fill indexes
-    public void fillIndex(String src) throws FileNotFoundException {
+    public void fillIndex(String src) throws ProblemFileException {
 
         File file = new File(src);
         if (!file.exists() && !file.isFile()) {
-            throw new FileNotFoundException("File: \"" + src + "\" not found!");
+            throw new ProblemFileException("File: \"" + src + "\" not found!");
         }
         try {
 
@@ -77,11 +80,11 @@ public class IndexCalculatorImpl implements IndexCalculator {
 
     // fill avalible calculation period
 
-    public void fillCalcPeriod(){
+    public void fillCalcPeriod() throws ProblemFileException {
         YearMonth tmpPeriod;
         YearMonth maxAvalible = getEndIndexesPeriod().plusMonths(2);
         if (maxAvalible.compareTo(getStartCalc())<0) {
-            throw new IllegalArgumentException("Not all indexes are loaded!");
+            throw new ProblemFileException("Not all indexes are loaded!");
         }
         tmpPeriod = getStartCalc();
         ArrayList<String> list = new ArrayList<String>();
