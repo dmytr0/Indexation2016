@@ -12,7 +12,12 @@ public class Start {
 
     public static void main(String[] args) {
         String file;
-        file = "src//main//resources//index.txt";
+        if(args.length != 0){
+            file = args[0];
+        }
+        else{
+            file = "src//main//resources//index.txt";
+        }
         final IndexCalculator ic = new IndexCalculatorImpl(file);
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
