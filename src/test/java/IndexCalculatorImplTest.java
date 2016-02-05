@@ -1,7 +1,7 @@
 import com.lemon.Exceptions.ProblemFileException;
 import com.lemon.Solution.IndexCalculator;
 import com.lemon.Solution.IndexCalculatorImpl;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -15,15 +15,15 @@ import static org.junit.Assert.assertEquals;
 
 public class IndexCalculatorImplTest {
 
-    IndexCalculator impl = new IndexCalculatorImpl("src//main//resources//index.txt");
+    static IndexCalculator impl = new IndexCalculatorImpl("src//main//resources//index.txt");
     IndexCalculator notExist = new IndexCalculatorImpl("null");
     IndexCalculator empty = new IndexCalculatorImpl("src//test//java//empty");
 
     @Rule
     public ExpectedException expectedEx = ExpectedException.none();
 
-    @Before
-    public void init(){
+    @BeforeClass
+    public static void init(){
 
         try {
             impl.initialization();
