@@ -18,6 +18,7 @@ public class IndexCalculatorImplTest {
     static IndexCalculator impl = new IndexCalculatorImpl("src//main//resources//index.txt");
     IndexCalculator notExist = new IndexCalculatorImpl("null");
     IndexCalculator empty = new IndexCalculatorImpl("src//test//java//empty");
+    IndexCalculator incorrect = new IndexCalculatorImpl("src//test//java//binary");
 
     @Rule
     public ExpectedException expectedEx = ExpectedException.none();
@@ -73,6 +74,14 @@ public class IndexCalculatorImplTest {
         expectedEx.expectMessage("Not all indexes are loaded!");
         empty.initialization();
         assertEquals(empty.solve("2010-01","2016-01"),  new BigDecimal("0.983"));
+    }
+
+    @Test
+    public void testIncorrect() throws ProblemFileException {
+        expectedEx.expect(ProblemFileException.class);
+        expectedEx.expectMessage("Not all indexes are loaded!");
+        incorrect.initialization();
+
     }
 
 

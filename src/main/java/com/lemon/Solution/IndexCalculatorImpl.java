@@ -11,6 +11,8 @@ import java.math.RoundingMode;
 import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class IndexCalculatorImpl implements IndexCalculator {
@@ -24,6 +26,9 @@ public class IndexCalculatorImpl implements IndexCalculator {
     private YearMonth endIndexesPeriod;
     private static final YearMonth startCalc = YearMonth.of(2016,1);
     BigDecimal limit = new BigDecimal("1.03");
+    private Pattern pattern;
+    private Matcher matcher;
+    String entryFormat = "(\\d\\.{0,1})*\t.*";
 
 
     public IndexCalculatorImpl(String src){
@@ -42,6 +47,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
     public void fillIndex(String src) throws ProblemFileException {
 
         File file = new File(src);
+        pattern = Pattern.compile(entryFormat);
         if (!file.exists() && !file.isFile()) {
             throw new ProblemFileException("File: \"" + src + "\" not found!");
         }
@@ -51,8 +57,8 @@ public class IndexCalculatorImpl implements IndexCalculator {
             BufferedReader br = new BufferedReader(fileReader);
             String currentIndex;
             while ((currentIndex = br.readLine()) != null) {
-
-                if (!currentIndex.equals("")) {
+                matcher = pattern.matcher(currentIndex);
+                if (!currentIndex.equals("") && matcher.matches()) {
                     YearMonth yearMonth = YearMonth.parse(currentIndex.split("\t")[0].split("\\.")[2]
                             + "-" + currentIndex.split("\t")[0].split("\\.")[1]);
                     indexes.put(yearMonth, new BigDecimal(currentIndex.split("\t")[1].replaceAll(",", ".")));
