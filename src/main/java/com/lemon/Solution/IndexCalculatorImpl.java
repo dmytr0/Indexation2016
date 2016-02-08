@@ -60,8 +60,7 @@ public class IndexCalculatorImpl implements IndexCalculator {
             }
 
         } catch (IOException e) {
-            System.out.println("ReadingError");
-            e.printStackTrace();
+            throw new ProblemFileException("Problem reading file!");
         }
     }
 
