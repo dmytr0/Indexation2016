@@ -16,7 +16,7 @@ public class Start {
             file = args[0];
         }
         else{
-            file = "src//main//resources//index.txt";
+            file = "resources/index.txt";
 
         }
         final IndexCalculator ic = new IndexCalculatorImpl(file);
