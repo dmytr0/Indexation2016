@@ -1,3 +1,3 @@
 # Indexation2016
-Расчет индексации с 2016 года 
+calculator indexation since 2016
 Ukraine
