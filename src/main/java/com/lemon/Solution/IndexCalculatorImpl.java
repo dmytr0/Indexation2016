@@ -28,7 +28,8 @@ public class IndexCalculatorImpl implements IndexCalculator {
     BigDecimal limit = new BigDecimal("1.03");
     private Pattern pattern;
     private Matcher matcher;
-    String entryFormat = "(\\d\\.{0,1})*\t.*";
+    String delimiter = "[\t\\s]+";
+    String entryFormat = "(\\d\\.{0,1})*"+ delimiter + ".*";
 
 
     public IndexCalculatorImpl(String src){
@@ -59,9 +60,9 @@ public class IndexCalculatorImpl implements IndexCalculator {
             while ((currentIndex = br.readLine()) != null) {
                 matcher = pattern.matcher(currentIndex);
                 if (!currentIndex.equals("") && matcher.matches()) {
-                    YearMonth yearMonth = YearMonth.parse(currentIndex.split("\t")[0].split("\\.")[2]
-                            + "-" + currentIndex.split("\t")[0].split("\\.")[1]);
-                    indexes.put(yearMonth, new BigDecimal(currentIndex.split("\t")[1].replaceAll(",", ".")));
+                    YearMonth yearMonth = YearMonth.parse(currentIndex.split(delimiter)[0].split("\\.")[2]
+                            + "-" + currentIndex.split(delimiter)[0].split("\\.")[1]);
+                    indexes.put(yearMonth, new BigDecimal(currentIndex.split(delimiter)[1].replaceAll(",", ".")));
                 }
             }
 
@@ -195,6 +196,8 @@ public class IndexCalculatorImpl implements IndexCalculator {
         this.minzp = minzp;
     }
 
-
+    public void setDelimiter(String delimiter) {
+        this.delimiter = delimiter;
+    }
 
 }
